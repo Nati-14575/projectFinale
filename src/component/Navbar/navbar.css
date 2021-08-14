@@ -1,22 +1,28 @@
 .navBar {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .navigation {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 .top {
-    width: 100%;
-    display: flex;
+  width: 100%;
+  display: flex;
 }
 
 .bottom {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
+}
+
+.search {
+  display: flex;
+  margin-left: 15%;
 }
 
 .signUp {
-margin-left: auto;
+  margin-left: auto;
 }
+
