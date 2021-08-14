@@ -1,0 +1,22 @@
+.navBar {
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation {
+    margin-left: auto;
+}
+
+.top {
+    width: 100%;
+    display: flex;
+}
+
+.bottom {
+    display: flex;
+    width: 100%;
+}
+
+.signUp {
+margin-left: auto;
+}

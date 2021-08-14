@@ -1,0 +1,55 @@
+.topContainer {
+    height: 300px;
+}
+
+.bottomContainer {
+    height: 250px;
+}
+
+.textContainer {
+    background-color: white;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    width: 40%;
+    padding: 10px;
+    border: 1px solid blue;
+}
+
+.textContainer label {
+    align-self: center;
+    margin-top: 10px;
+    font-weight: bolder;
+}
+
+.textContainer p {
+    font-weight: 500;
+}
+
+.text {
+    margin-left: 40px;
+}
+
+.text button {
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+.text a {
+    padding: 2px;
+    text-decoration: none;
+    border: 1px solid black;
+    color: black;
+    border-radius: 5px;
+    margin-left: 20%;
+}
+
+.special {
+    width: 100%;
+}
+
+.specialParagraph {
+    margin-left: 10%;
+    width: 40%;
+}
+
