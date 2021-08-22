@@ -18,16 +18,22 @@ import GroupWorkIcon from "@material-ui/icons/GroupWork";
 
 const useStyles = makeStyles({
   btn: {
-    color: "black",
+    color: "#fff",
     marginLeft: 40,
+    marginBottom: 10,
     fontSize: 15,
     textTransform: "none",
     "&:hover": {
-      textDecoration: "underline",
+      color: "#183661",
+    },
+    "&:active": {
+      color: "red",
     },
   },
+  input: {
+    borderColor: "#183661",
+  },
   btnlower: {
-    color: "black",
     marginLeft: 60,
     fontSize: 15,
     textTransform: "none",
@@ -38,11 +44,11 @@ const useStyles = makeStyles({
     fontWeight: "bold",
   },
   icon: {
+    marginTop: 20,
     color: "black",
-    fontSize: 45,
+    fontSize: 25,
   },
   appBar: {
-    backgroundColor: "whitesmoke",
     paddingBottom: 10,
   },
 });
@@ -50,7 +56,7 @@ const useStyles = makeStyles({
 export default function navbar() {
   const classes = useStyles();
   return (
-    <AppBar className={classes.appBar}>
+    <AppBar className={classes.appBar} position="static" color="primary">
       <Toolbar color="primary" className="navBar">
         <div className="top">
           <Typography
@@ -61,53 +67,11 @@ export default function navbar() {
           >
             EWKET
           </Typography>
-          <div className="navigation">
-            <Button className={classes.btn} startIcon={<HomeIcon />} href="/">
-              Home
-            </Button>
-            <Button className={classes.btn}>Courses</Button>
-            <Button
-              className={classes.btn}
-              startIcon={<ForumIcon />}
-              href="/courses"
-              href="/forum"
-            >
-              Forum
-            </Button>
-            <Button
-              className={classes.btn}
-              startIcon={<InfoIcon />}
-              href="/about"
-            >
-              About Us
-            </Button>
-            <Button
-              className={classes.btn}
-              startIcon={<GroupWorkIcon />}
-              href="/work"
-            >
-              Work with Us
-            </Button>
-          </div>
-        </div>
-        <div className="bottom">
-          <div className="search">
-            <SearchIcon className={classes.icon} />
-            <TextField
-              placeholder="search"
-              variant="outlined"
-              autoFocus
-              multiline
-              rows={1}
-              size="small"
-              type="string"
-              label="search"
-            />
-          </div>
+
           <div className="signUp">
             <Button
               className={classes.btnlower}
-              color="primary"
+              color="secondary"
               variant="contained"
               href="/login"
             >
@@ -115,12 +79,74 @@ export default function navbar() {
             </Button>
             <Button
               className={classes.btnlower}
-              color="primary"
+              color="secondary"
               variant="contained"
               href="/signup"
             >
               Sign Up
             </Button>
+          </div>
+        </div>
+        <div className="bottom">
+          <div className="navigation">
+            <Button
+              className={classes.btn}
+              variant="filled"
+              color="primary"
+              startIcon={<HomeIcon />}
+              href="/"
+            >
+              Home
+            </Button>
+            <Button
+              className={classes.btn}
+              variant="filled"
+              color="primary"
+              href="/courses"
+            >
+              Courses
+            </Button>
+            <Button
+              className={classes.btn}
+              startIcon={<ForumIcon />}
+              variant="filled"
+              color="primary"
+              href="/forum"
+            >
+              Forum
+            </Button>
+            <Button
+              className={classes.btn}
+              startIcon={<InfoIcon />}
+              variant="filled"
+              color="primary"
+              href="/about"
+            >
+              About Us
+            </Button>
+            <Button
+              className={classes.btn}
+              startIcon={<GroupWorkIcon />}
+              variant="filled"
+              color="primary"
+              href="/work"
+            >
+              Work with Us
+            </Button>
+          </div>
+          <div className="search">
+            <SearchIcon className={classes.icon} />
+            <TextField
+              placeholder="search"
+              autoFocus
+              endIcon={<SearchIcon />}
+              className={classes.input}
+              multiline
+              rows={1}
+              size="small"
+              type="string"
+              label="search"
+            />
           </div>
         </div>
       </Toolbar>

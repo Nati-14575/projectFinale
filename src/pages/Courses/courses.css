@@ -1,0 +1,54 @@
+.courses {
+  margin-top: 30px;
+  width: 100%;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+}
+
+.grid {
+  background-color: wheat;
+
+  margin-left: auto;
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-end;
+}
+
+.MuiGridListTile-root {
+  width: 40% !important;
+  margin: 30px !important;
+}
+
+.MuiGridListTileBar-root {
+  background-color: rgb(81, 190, 120, 0.2);
+}
+
+.courseList {
+  width: 80%;
+}
+
+.gridbutton {
+  border-color: white !important;
+  background-color: white !important;
+  border-width: 0px;
+  cursor: pointer;
+}
+
+.MuiGridListTileBar-title {
+  color: black;
+  font-size: 25px !important;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.MuiGridListTileBar-subtitle {
+  color: black;
+  font-size: 15px !important;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.category {
+  width: 30%;
+  background-color: whitesmoke;
+}

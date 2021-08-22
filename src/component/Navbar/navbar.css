@@ -4,10 +4,11 @@
 }
 
 .navigation {
-  margin-left: auto;
+  margin-right: auto;
 }
 
 .top {
+  padding: 20px;
   width: 100%;
   display: flex;
 }
@@ -19,10 +20,10 @@
 
 .search {
   display: flex;
-  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .signUp {
   margin-left: auto;
+  align-self: center;
 }
-
