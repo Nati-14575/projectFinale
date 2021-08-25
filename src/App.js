@@ -10,6 +10,8 @@ import homePage from "./pages/HomePage/homePage";
 import Courses from "./pages/Courses/courses";
 import createForum from "./pages/Forum/create/createForum";
 import displayForum from "./pages/Forum/display/displayForum";
+import store from "./redux/store";
+import { Provider } from "react-redux";
 // Material-ui
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/core";
@@ -27,22 +29,24 @@ const theme = createMuiTheme({
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Router>
-        <div className="body">
-          <Navbar />
-          <Switch>
-            <Route path="/" exact component={homePage} />
-            <Route path="/login" exact component={Login} />
-            <Route path="/signup" exact component={SignUP} />
-            <Route path="/courses" exact component={Courses} />
-            <Route path="/create_forum" exact component={createForum} />
-            <Route path="/display_forum" exact component={displayForum} />
-          </Switch>
-        </div>
-        {/* <Footer /> */}
-      </Router>
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <div className="body">
+            <Navbar />
+            <Switch>
+              <Route path="/" exact component={homePage} />
+              <Route path="/login" exact component={Login} />
+              <Route path="/signup" exact component={SignUP} />
+              <Route path="/courses" exact component={Courses} />
+              <Route path="/create_forum" exact component={createForum} />
+              <Route path="/display_forum" exact component={displayForum} />
+            </Switch>
+          </div>
+          {/* <Footer /> */}
+        </Router>
+      </ThemeProvider>
+    </Provider>
   );
 }
 

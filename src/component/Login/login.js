@@ -5,11 +5,12 @@ import {
   Container,
   Link,
 } from "@material-ui/core";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./login.css";
 import { makeStyles } from "@material-ui/core";
 import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 import EmailIcon from "@material-ui/icons/Email";
+import { userLogin } from "../../redux/actions/userActions";
 
 const useStyle = makeStyles({
   input: {
@@ -37,9 +38,9 @@ export default function login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  let handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(email, password);
+    this.props.userLogin({ email, password }, this.props.history);
   };
 
   return (
@@ -57,6 +58,8 @@ export default function login() {
           >
             <TextField
               startIcon={<EmailIcon />}
+              name="email"
+              id="email"
               className={classes.input}
               required
               autoFocus
@@ -68,6 +71,8 @@ export default function login() {
             />
             <TextField
               className={classes.input}
+              name="password"
+              id="password"
               required
               label="Password"
               autoFocus
@@ -82,10 +87,12 @@ export default function login() {
               variant="contained"
               className={classes.submit}
               endIcon={<KeyboardArrowRightIcon float="right" label="Log In" />}
+              onClick={this.handleSubmit}
             >
               Log In
             </Button>
           </form>
+
           <div className="underForm">
             <Link component="button" className={classes.link} variant="body2">
               Forgot Password?

@@ -1,0 +1,11 @@
+.list ul {
+  list-style: none;
+  text-align: left;
+  border-bottom: 3px black !important;
+}
+
+.list li {
+  padding: 5px;
+  text-align: left;
+  border-bottom: 3px black !important;
+}

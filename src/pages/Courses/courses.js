@@ -19,6 +19,7 @@ const useStyle = makeStyles({
 const state = [
   {
     id: 1,
+    category: "CSE",
     text: "FaceBook",
     image: "navbar/learning.png",
     description:
@@ -26,42 +27,49 @@ const state = [
   },
   {
     id: 2,
+    category: "Software",
     text: "FaceBook",
     image: "navbar/students.png",
     description: "Lorem ipsum",
   },
   {
     id: 2,
+    category: "CSE",
     text: "FaceBook",
     image: "navbar/students2.png",
     description: "Lorem ipsum",
   },
   {
     id: 1,
+    category: "Software",
     text: "FaceBook",
     image: "navbar/learning.png",
     description: "Lorem ipsum",
   },
   {
     id: 2,
+    category: "CSE",
     text: "FaceBook",
     image: "navbar/students2.png",
     description: "Lorem ipsum",
   },
   {
     id: 1,
+    category: "Software",
     text: "FaceBook",
     image: "navbar/learning.png",
     description: "Lorem ipsum",
   },
   {
     id: 2,
+    category: "CSE",
     text: "FaceBook",
     image: "navbar/students.png",
     description: "Lorem ipsum",
   },
   {
     id: 1,
+    category: "Civil",
     text: "FaceBook",
     image: "navbar/learning.png",
     description: "Lorem ipsum",
@@ -69,6 +77,7 @@ const state = [
 
   {
     id: 1,
+    category: "CSE",
     text: "FaceBook",
     image: "navbar/learning.png",
     description: "Lorem ipsum",
@@ -95,7 +104,7 @@ export default function courses() {
           >
             Categories
           </Typography>
-          <CourseCategories item={state} />;
+          <CourseCategories item={state} />
         </div>
       </>
       <div className="courseList">

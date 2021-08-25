@@ -8,8 +8,6 @@
 }
 
 .grid {
-  background-color: wheat;
-
   margin-left: auto;
   display: flex;
   justify-content: space-around;

@@ -1,17 +1,16 @@
 import React from "react";
+import "./courseCategories.css";
 
 const courseCategories = (props) => {
-  console.log("reached here");
-
   return (
     <>
-      {props.state.map((item) => {
-        <div>
+      {props.item.map((item) => (
+        <div className="list">
           <ul>
-            <li>{item}</li>
+            <li>{item.category}</li>
           </ul>
-        </div>;
-      })}
+        </div>
+      ))}
     </>
   );
 };

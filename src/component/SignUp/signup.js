@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./signup.css";
 import { makeStyles } from "@material-ui/core";
 import { TextField, Typography, Button } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
+import { userSignup } from "../../redux/actions/userActions";
 
 const useStyle = makeStyles({
   input: {
@@ -23,6 +24,19 @@ const useStyle = makeStyles({
 });
 export default function signup() {
   const classes = useStyle();
+  const [first_name, setFirstName] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    this.props.userSignup(
+      { email, password, first_name, confirm_password },
+      this.props.history
+    );
+  };
+
   return (
     <div className="container">
       <div className="signupContainer">
@@ -32,6 +46,8 @@ export default function signup() {
         <form onSubmit="" className="signupForm">
           <TextField
             className={classes.input}
+            name="first_name"
+            id="first_name"
             type="text"
             required
             autoFocus
@@ -39,8 +55,11 @@ export default function signup() {
             placeholder="Enter your first name"
             variant="outlined"
             color="secondary"
+            onChange={(event) => setFirstName(event.target.value)}
           />
           <TextField
+            name="last_name"
+            id="last_name"
             className={classes.input}
             type="text"
             required
@@ -48,8 +67,11 @@ export default function signup() {
             label="Last name"
             placeholder="Enter your last name"
             variant="outlined"
+            onChange={(event) => setLastName(event.target.value)}
           />
           <TextField
+            name="email"
+            id="email"
             className={classes.input}
             required
             autoFocus
@@ -77,7 +99,7 @@ export default function signup() {
             placeholder="Confirm your password"
             type="password"
             variant="outlined"
-            onChange={(event) => setPassword(event.target.value)}
+            onChange={(event) => setConfirmPassword(event.target.value)}
           />
           <Button
             type="submit"
@@ -85,6 +107,7 @@ export default function signup() {
             variant="contained"
             className={classes.submit}
             label="Sign Up"
+            onClick={this.handleSubmit}
           >
             Sign Up
           </Button>

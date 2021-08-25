@@ -111,7 +111,7 @@ export default function navbar() {
               startIcon={<ForumIcon />}
               variant="filled"
               color="primary"
-              href="/forum"
+              href="/display_forum"
             >
               Forum
             </Button>
